@@ -5,8 +5,8 @@ account: coryderringer
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 868906
-bundleId: 2016294
+bundleId: 2016426
 url: https://coryderringer.shinyapps.io/ShotLocationsApp/
-when: 1555433477.44638
+when: 1555436606.37721
 asMultiple: FALSE
 asStatic: FALSE
