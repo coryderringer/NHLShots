@@ -16,9 +16,13 @@ library(hexbin)
 
 # Define UI for application (inputs and outputs)
 ui <- fluidPage(
-    titlePanel("NHL Shot Location Data"),
-    h3("an ongoing endeavor..."),
-
+    
+    fluidRow(column(3),
+             column(6,
+        h1("NHL Shot Location Data"),
+            h3("an ongoing endeavor...")),
+        column(3)),
+    
     sidebarPanel(
         p('This app visualizes the shot locations from all 82 games of the 2018-19 NHL season, for all 31 teams.'),
         selectInput(inputId = "team", label = "Select a team",
@@ -37,7 +41,7 @@ ui <- fluidPage(
         plotOutput(outputId = "shotMap")    
     )
     
-    
+     
     # output data:
     # fluidRow(
     #     column(12,
