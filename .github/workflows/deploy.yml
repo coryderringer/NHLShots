@@ -17,7 +17,7 @@ jobs:
 
       - name: Install rsconnect
         run: |
-          install.packages("rsconnect")
+          install.packages("rsconnect", repos = "https://cloud.r-project.org")
         shell: Rscript {0}
 
       - name: Deploy to shinyapps.io
@@ -34,7 +34,7 @@ jobs:
             secret = Sys.getenv("SHINYAPPS_SECRET")
           )
           rsconnect::deployApp(
-            appDir = ".",  # adjust if your app is in a subfolder
+            appDir = "ShotLocationsApp",
             account = Sys.getenv("SHINYAPPS_ACCOUNT"),
             server = Sys.getenv("SHINYAPPS_SERVER")
           )
