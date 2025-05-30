@@ -86,6 +86,7 @@ server <- function(input, output) {
 
         baseplot <- build_rink(paste('Team: ', input$team, sep = ''))
 
+
         if (input$result == 'Goal') {
             p <- baseplot +
                 geom_jitter(data = goals, alpha = .5, height = 1, width = .1, colour = 'red') +
@@ -102,6 +103,7 @@ server <- function(input, output) {
                 geom_jitter(data = goals, alpha = .5, height = 1, width = .1, colour = 'red') +
                 labs(subtitle = 'All Shots (Goals in Red)')
         }
+
 
         p
     })
