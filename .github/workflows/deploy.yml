@@ -2,7 +2,7 @@ name: Deploy to shinyapps.io
 
 on:
   push:
-    branches: [main]  # or whichever branch you use
+    branches: [master]
 
 jobs:
   deploy:
