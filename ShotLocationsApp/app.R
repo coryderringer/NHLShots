@@ -81,7 +81,7 @@ server <- function(input, output) {
             # actual data
             # two different datasets, so we only have to handle the data we're visualizing
             if(input$result == 'Goal'){
-                p <- baseplot + geom_jitter(alpha = .5, height = 1, width = .1, colour = 'red') +
+                p <- baseplot + geom_jitter(alpha = .5, height = 1, width = .1, colour = 'purple') +
                 labs(subtitle = 'Goals')
             }else if(input$result == 'Save'){
                 p <- baseplot + geom_hex(data = saves, alpha = .5)+
@@ -91,8 +91,8 @@ server <- function(input, output) {
                 p <- baseplot + geom_hex(data = saves, alpha = .5)+
                     scale_fill_gradient(low = "light grey", high = "black") +
                     
-                    geom_jitter(alpha = .5, height = 1, width = .1, colour = 'red') +
-                    labs(subtitle = 'All Shots (Goals in Red)')
+                    geom_jitter(alpha = .5, height = 1, width = .1, colour = 'purple') +
+                    labs(subtitle = 'All Shots (Goals in Purple)')
                     
             }
         
